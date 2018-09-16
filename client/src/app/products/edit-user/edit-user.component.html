@@ -1,0 +1,38 @@
+<div>
+    <h1>Edit</h1>
+    <form [formGroup]="formEdit" (ngSubmit)="onSubmit(formEdit.value)">
+      <div class="form-group">
+      <input required formControlName="name" type="text" id="name" name="name" class="form-control" placeholder="enter name" />
+    </div>
+    <div class="form-group">
+      <input required type="text" id="detail" formControlName="detail" name="detail" class="form-control" placeholder="enter detail" />
+    </div>
+    <div class="form-group group">
+        Choose car : <select formControlName="car" form="cform">
+          <option value="Volvo">Volvo</option>
+          <option value="Mercedes">Mercedes</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Honda">Honda</option>
+        </select>
+      </div>
+      <div class="form-group group">
+          <label class="rformat">
+          <input type="radio" id="male"value="MALE" formControlName="gender"    /><span>MALE</span> 
+        </label>
+        <label class="rformat">
+          <input type="radio" id="female"value="FEMALE" formControlName="gender"    /><span> FEMALE</span>
+        </label>
+        <label class="rformat">
+            <input type="radio" id="female"value="NEITHER" formControlName="gender"    /><span> NEITHER</span>
+          </label>  
+        </div>
+        <div class="form-group group" >
+            <label class="group" formArrayName="statuses" *ngFor="let order of addForm.controls.statuses.controls; let i=index">
+                <input type="checkbox" [formControlName]="i" />
+                {{statuses[i].name}}
+              </label>  
+        </div>
+      <button [disabled]="!formEdit.valid" class="btn btn-success">Update</button>
+      <button class="btn btn-basic" style="margin-left:10px"  (click)="back()"><i class="fa fa-repeat"></i></button>
+    </form>
+  </div>
