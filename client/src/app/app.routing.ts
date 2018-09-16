@@ -1,7 +1,7 @@
-import { EditUserComponent } from './products/edit-user/edit-user.component';
-import { AddUserComponent } from './products/add-user/add-user.component';
+import { EditUserComponent } from './users/edit-user/edit-user.component';
+import { AddUserComponent } from './users/add-user/add-user.component';
 import {RouterModule, Routes} from '@angular/router'
-import {UserListComponent} from './products/user-list/user-list.component'
+import {UserListComponent} from './users/user-list/user-list.component'
 
 const routes:Routes=[
     {

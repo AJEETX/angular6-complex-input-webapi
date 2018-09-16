@@ -1,15 +1,15 @@
-import { UserListComponent } from './products/user-list/user-list.component';
-import { AddUserComponent } from './products/add-user/add-user.component';
+import { UserListComponent } from './users/user-list/user-list.component';
+import { AddUserComponent } from './users/add-user/add-user.component';
 import { UserService } from './service/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {routing} from './app.routing'
 import { AppComponent } from './app.component';
-import { UsersComponent } from './products/users.component';
+import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { EditUserComponent } from './products/edit-user/edit-user.component';
+import { EditUserComponent } from './users/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
